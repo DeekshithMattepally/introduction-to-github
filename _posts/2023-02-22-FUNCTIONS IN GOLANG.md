@@ -154,6 +154,7 @@ Example program:
 
 // printNumbers is a variadic function that takes a variable number of integers
 // and prints them to the console separated by spaces.
+	
 	func printNumbers(numbers ...int) 
 	{
 	for _, num := range numbers 
@@ -178,6 +179,7 @@ Output:
 	4 5 
 	6 
 
+
 When we use a variadic function:
 •	Instead of sending a slice to a function, you can use a variable function.
 •	When the number of parameters is unknown, a variable function is utilized.
@@ -198,21 +200,30 @@ func(parameter_list)(return_type){
 // use return statement
 return
 }()
+
 Example:
-package main
-import "fmt"
-func main() {
-    // Define an anonymous function that takes two integers as arguments
-    // and returns their sum.
-    add := func(a, b int) int {
+
+	package main
+	import "fmt"
+	func main() 
+	{
+	   
+	   // Define an anonymous function that takes two integers as arguments
+	    // and returns their sum.
+   
+   	add := func(a, b int) int {
         return a + b
-    }
-    // Call the anonymous function with two integers.
-    result := add(3, 4)
-    fmt.Println("Result:", result)
-}
+    	}
+   	 
+	 // Call the anonymous function with two integers.
+   	
+	result := add(3, 4)
+    	fmt.Println("Result:", result)
+	}
+
 Output:
-Result: 7
+
+	Result: 7
 
 NOTES:
 •	An anonymous function may be assigned to a variable in the Go programming language. When you assign a function to a variable, the variable's type changes to that of a function, allowing you to call it just like a function call, as demonstrated in the example below.
