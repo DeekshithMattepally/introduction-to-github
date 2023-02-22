@@ -362,7 +362,7 @@ OUTPUT:
 
 	Welcome to DEEKSHITH MATTEPALLY
 
-Challenges that I faced by me while learning go lang are 
+Challenges that faced by me while learning go lang are 
 
 Syntax: One of my most significant challenges was getting used to Go's syntax. The syntax for functions in Go differs from other languages, and it may take some time to get comfortable with it.
 
