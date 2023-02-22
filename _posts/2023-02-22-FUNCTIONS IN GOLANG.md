@@ -264,70 +264,103 @@ Output:
 
 
 •	Can pass arguments in the anonymous function
+
 Example program:
-package main
-import "fmt"
-func main() {
+
+	package main
+	import "fmt"
+	func main() 
+	{
+	
 	// Define an anonymous function that takes two integers
 	// as arguments and returns their sum.
-	sum := func(a, b int) int {
-		return a + b
+	
+	sum := func(a, b int) int 
+	{
+	return a + b
 	}
+	
 	// Call the anonymous function with two numbers.
+	
 	result := sum(2, 3)
+	
 	// Print the result to the console.
+	
 	fmt.Println("The sum of 2 and 3 is", result)
-}
+	}
+
 Output:
-The sum of 2 and 3 is 5
+
+	The sum of 2 and 3 is 5
 
 •	Can also pass an anonymous function into another function as a parameter.
+
 Example program:
-package main
-import "fmt"
-func main() {
+	
+	package main
+	import "fmt"
+	func main()
+	{
+	
 	// Define an anonymous function that takes two integers as arguments
 	// and returns their sum.
-	sum := func(a, b int) int {
-		return a + b
+	
+	sum := func(a, b int) int 
+	{
+	return a + b
 	}
 
 	// Define a function called "calculate" that takes two integers and an
 	// anonymous function as arguments. The function should call the anonymous
 	// function with the two integers and return the result.
-	calculate := func(a, b int, f func(int, int) int) int {
-		return f(a, b)
+	
+	calculate := func(a, b int, f func(int, int) int) int 
+	{
+	return f(a, b)
 	}
+	
 	// Call the "calculate" function with the two numbers 2 and 3, and the
 	// anonymous "sum" function as arguments. This should return the sum of
 	// 2 and 3 (i.e. 5).
+	
 	result := calculate(2, 3, sum)
+	
 	// Print the result to the console.
+	
 	fmt.Println("The sum of 2 and 3 is", result)
-}
+	}
+
 Output:
-The sum of 2 and 3 is 5
+
+	The sum of 2 and 3 is 5
 
 
 
 
 •	Can also return an anonymous function from another function:
+
 Example program:
-package main
-import "fmt"
-// Returning anonymous function
-func DM() func(i, j string) string {
+
+	package main
+	import "fmt"
+
+	// Returning anonymous function
+
+	func DM() func(i, j string) string {
 	myf := func(i, j string) string {
-		return i + j + "DEEKSHITH MATTEPALLY"
+	return i + j + "DEEKSHITH MATTEPALLY"
 	}
 	return myf
-}
-func main() {
+	}
+	func main() 
+	{
 	value := DM()
 	fmt.Println(value("Welcome ", "to "))
-}
+	}
+
 OUTPUT:
-Welcome to DEEKSHITH MATTEPALLY
+
+	Welcome to DEEKSHITH MATTEPALLY
 
 
 
