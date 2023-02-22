@@ -152,8 +152,8 @@ Example program:
 	package main
 	import "fmt"
 
-// printNumbers is a variadic function that takes a variable number of integers
-// and prints them to the console separated by spaces.
+	// printNumbers is a variadic function that takes a variable number of integers
+	// and prints them to the console separated by spaces.
 	
 	func printNumbers(numbers ...int) 
 	{
@@ -166,7 +166,7 @@ Example program:
 	func main() 
 	{
     
-// Call the printNumbers function with different numbers of arguments.
+	// Call the printNumbers function with different numbers of arguments.
     
 	 printNumbers(1, 2, 3)
 	 printNumbers(4, 5)
@@ -227,26 +227,36 @@ Output:
 
 NOTES:
 •	An anonymous function may be assigned to a variable in the Go programming language. When you assign a function to a variable, the variable's type changes to that of a function, allowing you to call it just like a function call, as demonstrated in the example below.
+
 Example program;
-package main
-import "fmt"
-func main() {
-    // Define a slice of integers.
-    numbers := []int{1, 2, 3, 4, 5}
-    // Use an anonymous function to calculate the sum of the numbers.
-    sum := func() int {
+
+	package main
+	import "fmt"
+	func main() 
+	{
+    	// Define a slice of integers.
+	
+    	numbers := []int{1, 2, 3, 4, 5}
+	
+    	// Use an anonymous function to calculate the sum of the numbers.
+    
+    	sum := func() int {
         result := 0
-        for _, num := range numbers {
-            result += num
+        for _, num := range numbers 
+	{
+        result += num
         }
         return result
-    }()
-    // Print the sum of the numbers.
-    fmt.Println("Sum of the numbers:", sum)
-}
+    	}()
+    
+    	// Print the sum of the numbers.
+    
+    	fmt.Println("Sum of the numbers:", sum)
+	}
+
 Output:
 
-Sum of the numbers: 15
+	Sum of the numbers: 15
 
 
 
