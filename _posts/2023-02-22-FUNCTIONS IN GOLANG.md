@@ -45,7 +45,7 @@ Example program:
 
 Output:
 
-  The area of the rectangle is: 125.00
+  	The area of the rectangle is: 125.00
 
 
 Function arguments:
@@ -58,28 +58,30 @@ Call by value:
 This method of transferring parameters copies the values of the actual parameters to the function’s formal parameters and stores the two types of parameters in different parts of memory. Hence, modifications made inside such functions do not affect the caller's actual parameters.
 
 Example program:
-package main
-import "fmt"
-    // swap is a function that takes two integer values and swaps their values.
-func swap(a, b int) 
-{
-temp := a
-a = b
-b = temp
-}
-func main() 
-{
-	// Declare two integer variables and assign them values.
-x := 5
-y := 10
+	package main
+	import "fmt"
+// swap is a function that takes two integer values and swaps their values.
+	func swap(a, b int) 
+	{
+	temp := a
+	a = b
+	b = temp
+	}
+	func main() 
+	{
+// Declare two integer variables and assign them values.
+	x := 5
+	y := 10
 	// Call the swap function and pass in the two variables.
-swap(x, y)
-	// Print the values of x and y after the swap function call.
-fmt.Printf("x = %d, y = %d\n", x, y)
-}
+	swap(x, y)
+// Print the values of x and y after the swap function call.
+	fmt.Printf("x = %d, y = %d\n", x, y)
+	}
+
 
 Output:
-  x = 5, y = 10
+ 
+ 	x = 5, y = 10
 
 Call by reference:
 All changes in the function are reflected in the caller's actual parameters because the formal and basic parameters point to exact locations.
