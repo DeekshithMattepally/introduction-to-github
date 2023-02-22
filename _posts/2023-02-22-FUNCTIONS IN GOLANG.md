@@ -20,28 +20,28 @@ When a user wants to call or invoke a function, this is known as function invoca
 
 Example program:
 
-package main
-import "fmt"
-      // calculateArea is used to find the
-      // area of a rectangle. It takes two
-      // parameters: length and width, both
-      // of which are floats. It returns a
-      // float value for the area.
-func calculateArea(length, width float64) float64
-{
-area := length * width
-return area
-}
-func main() 
-{
-   	 // Define the length and width of the rectangle
-length := 12.5
-width := 10.0
-   	 // Call the calculateArea function and store the result
-area := calculateArea(length, width)
-   	 // Print the area to the console
-fmt.Printf("The area of the rectangle is: %.2f\n", area)
-}
+	package main
+	import "fmt"
+      	// calculateArea is used to find the
+      	// area of a rectangle. It takes two
+      	// parameters: length and width, both
+     	// of which are floats. It returns a
+     	// float value for the area.
+	func calculateArea(length, width float64) float64
+	{
+	area := length * width
+	return area
+	}
+	func main() 
+	{
+   	// Define the length and width of the rectangle
+	length := 12.5
+	width := 10.0
+  	// Call the calculateArea function and store the result
+	area := calculateArea(length, width)
+ 	// Print the area to the console
+	fmt.Printf("The area of the rectangle is: %.2f\n", area)
+	}
 
 Output:
 
