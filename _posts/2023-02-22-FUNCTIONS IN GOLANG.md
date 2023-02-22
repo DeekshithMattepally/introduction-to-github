@@ -133,37 +133,50 @@ Example program:
 	fmt.Printf("After swap: x = %d, y = %d\n", x, y)
 	}
 
+
 Output:
-  Before swap: x = 5, y = 10
-  After swap: x = 10, y = 5
+  
+	  Before swap: x = 5, y = 10
+	  After swap: x = 10, y = 5
 
 Variadic functions:
 Variadic functions are those that are invoked with different numbers of arguments. In the variadic function, a user may pass zero or more arguments, to put it another way. fmt.printl. An example of a variable function, which initially required one fixed statement before accepting any number of arguments.
+
 Syntax:
 function function_name(para1, para2...type)type {// code...}
+
 Note: The type of the final parameter in the declaration of the variadic function is preceded by an ellipsis, as in (...). It means that any number of parameters of this type may be used to call the function.
 
 Example program:
-package main
-import "fmt"
+
+	package main
+	import "fmt"
+
 // printNumbers is a variadic function that takes a variable number of integers
 // and prints them to the console separated by spaces.
-func printNumbers(numbers ...int) {
-    for _, num := range numbers {
-        fmt.Printf("%d ", num)
-    }
-    fmt.Println()
-}
-func main() {
-    // Call the printNumbers function with different numbers of arguments.
-    printNumbers(1, 2, 3)
-    printNumbers(4, 5)
-    printNumbers(6)
-}
+	func printNumbers(numbers ...int) 
+	{
+	for _, num := range numbers 
+	{
+	fmt.Printf("%d ", num)
+    	}
+    	fmt.Println()
+	}
+	func main() 
+	{
+    
+// Call the printNumbers function with different numbers of arguments.
+    
+	 printNumbers(1, 2, 3)
+	 printNumbers(4, 5)
+	 printNumbers(6)
+	}
+
 Output:
-1 2 3 
-4 5 
-6 
+
+	1 2 3 
+	4 5 
+	6 
 
 When we use a variadic function:
 •	Instead of sending a slice to a function, you can use a variable function.
