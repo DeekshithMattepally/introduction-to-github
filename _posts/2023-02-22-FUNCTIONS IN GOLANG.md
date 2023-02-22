@@ -60,7 +60,7 @@ This method of transferring parameters copies the values of the actual parameter
 Example program:
 	package main
 	import "fmt"
-// swap is a function that takes two integer values and swaps their values.
+		// swap is a function that takes two integer values and swaps their values.
 	func swap(a, b int) 
 	{
 	temp := a
@@ -69,12 +69,12 @@ Example program:
 	}
 	func main() 
 	{
-// Declare two integer variables and assign them values.
+		// Declare two integer variables and assign them values.
 	x := 5
 	y := 10
-	// Call the swap function and pass in the two variables.
+		// Call the swap function and pass in the two variables.
 	swap(x, y)
-// Print the values of x and y after the swap function call.
+		// Print the values of x and y after the swap function call.
 	fmt.Printf("x = %d, y = %d\n", x, y)
 	}
 
