@@ -364,11 +364,11 @@ OUTPUT:
 
 Challenges that faced by me while learning go lang are 
 
-Syntax: One of my most significant challenges was getting used to Go's syntax. The syntax for functions in Go differs from other languages, and it may take some time to get comfortable with it.
+**Syntax**: One of my most significant challenges was getting used to Go's syntax. The syntax for functions in Go differs from other languages, and it may take some time to get comfortable with it.
 
-Understanding Function Arguments: In Go, we must specify the type of argument when defining a function. This is challenging because I need to get used to specifying the data types explicitly.
+**Understanding Function Arguments**: In Go, we must specify the type of argument when defining a function. This is challenging because I need to get used to specifying the data types explicitly.
 
-Understanding Variadic Functions: Go supports variadic functions, which take an indefinite number of arguments. This is tricky for me, who is not used to this function.
+**Understanding Variadic Functions**: Go supports variadic functions, which take an indefinite number of arguments. This is tricky for me, who is not used to this function.
 
 
 
