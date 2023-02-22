@@ -89,30 +89,42 @@ All changes in the function are reflected in the caller's actual parameters beca
 
 Example program:
 
-package main
-import "fmt"
-    // swap is a function that takes two integer pointers and swaps their values.
-func swap(a, b *int) 
-{
-temp := *a
-*a = *b
-*b = temp
-}
-func main() 
-{
-	// Declare two integer variables and assign them values.
-x := 5
-y := 10
-	// Print the initial values of x and y.
-fmt.Printf("Before swap: x = %d, y = %d\n", x, y)
-	// Declare two integer pointers and assign them the addresses of x and y.
-ptrX := &x
-ptrY := &y
-	// Call the swap function and pass in the two pointers.
-swap(ptrX, ptrY)
-	// Print the values of x and y after the swap function call.
-fmt.Printf("After swap: x = %d, y = %d\n", x, y)
-}
+	package main
+	import "fmt"
+   	 	
+		// swap is a function that takes two integer pointers and swaps their values.
+	
+	func swap(a, b *int) 
+	{
+	temp := *a
+	*a = *b
+	*b = temp
+	}
+	func main() 
+	{
+	
+		// Declare two integer variables and assign them values.
+	
+	x := 5
+	y := 10
+		
+		// Print the initial values of x and y.
+	
+	fmt.Printf("Before swap: x = %d, y = %d\n", x, y)
+		
+		// Declare two integer pointers and assign them the addresses of x and y.
+	
+	ptrX := &x
+	ptrY := &y
+		
+		// Call the swap function and pass in the two pointers.
+	
+	swap(ptrX, ptrY)
+		
+		// Print the values of x and y after the swap function call.
+	
+	fmt.Printf("After swap: x = %d, y = %d\n", x, y)
+	}
 
 Output:
   Before swap: x = 5, y = 10
