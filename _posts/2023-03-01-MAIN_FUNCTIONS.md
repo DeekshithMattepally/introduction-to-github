@@ -24,6 +24,7 @@ Output:
 Init() function:
 When a package is imported into memory in Go, a particular function called init() is called automatically. Any initialization operations that must be completed before the package can be used are usually carried out using the init() function defined in a package.
 Wherever in the program we like, we can create an init() function, which is called in lexical file name order (Alphabetical Order). Moreover, statements may be included if the init() function is called, but always keep in mind that the init() method runs before the call to the main() function, therefore it is independent of the main() function. Initializing global variables that cannot be initialized in the global context is the primary goal of the init() function.
+
 Example program:
 
 		// Declaration of the main package
@@ -59,41 +60,50 @@ Output:
 •	As long as they are all written in the same package, creating several init() functions in a Go program is OK. Several init() functions should be more advised, though, as they might make the program more challenging to comprehend and maintain. Generally speaking, it is better to define one init() function per package, using that method to carry out any initialization duties required.
 
 Blank identifier(underscore) in go lang:
+
 The underscore (_) is referred to as the "anonymous variable" or the "blank identifier" in Go. It is a unique identifier that can be used to ignore an expression's value or to denote the absence of a variable.
 The main application of Blank Identifier is when a function returns a large number of items, but we only require a small subset of those values and wish to toss the rest. It instructs the compiler to ignore this variable without raising any errors because it is not required. It makes the program understandable and conceals the values of the variables. Hence, if you give Blank Identifier a value, it is rendered useless.
 
 The blank Identifier in Go is frequently used in the following scenarios:
+
 1.	Ignoring an expression's value:
 
-package main
-
-import "fmt"
-
-func main() {
-    sum, _ := calculateSumAndProduct(2, 3)
-    fmt.Println("Sum:", sum)
-}
-
-func calculateSumAndProduct(x, y int) (int, int) {
-    return x+y, x*y
-}
+		package main
+		import "fmt"
+		func main() {
+		sum, _ := calculateSumAndProduct(2, 3)
+		fmt.Println("Sum:", sum)
+		}
+		func calculateSumAndProduct(x, y int) (int, int) {
+		return x+y, x*y
+		}
 
 Output:
-Sum: 5
+
+		Sum: 5
 
 
 •	In this example, the second return result from the calculateSumAndProduct() function is discarded using the blank Identifier. We utilize the blank Identifier to say that we are not interested in the result of the same numbers because we only care about the sum of two numbers.
 
 2.	demonstrating the absence of a variable:
          
-package main
-import "fmt"
-func main() {
-    numbers := []int{1, 2, 3, 4, 5}
-    for _, num := range numbers {
-        fmt.Println(num)
-    }
-}
+	package main
+	import "fmt"
+	func main() {
+	numbers := []int{1, 2, 3, 4, 5}
+	for _, num := range numbers {
+	fmt.Println(num)
+	}
+	}
+	
+OUTPUT:
+
+		1
+		2
+		3
+		4
+		5
+
 •	To indicate that we are not interested in the index of the elements in the numbers slice in this example, we use the blank Identifier. We use the blank Identifier to ignore the index because we are just interested in the values of the items.
 •	It should be noted that the blank Identifier can be applied everywhere a variable is needed, but its value is not. The blank Identifier should only be used when it benefits the code. Overusing the blank Identifier is generally discouraged because it might make the code more difficult to read and maintain.
 
@@ -102,34 +112,34 @@ The defer keyword in Go is used to plan the execution of a function call to happ
 
 
 
-
-
-
 Syntax:edd
-// Function
-defer func func_name(parameter_list Type)return_type{
-// Code
-}
-// Method
-defer func (receiver Type) method_name(parameter_list){
-// Code
-}
-defer func (parameter_list)(return_type){
-// code
-}()
+	// Function
+	defer func func_name(parameter_list Type)return_type{
+	// Code
+	}
+	// Method
+	defer func (receiver Type) method_name(parameter_list){
+	// Code
+	}
+	defer func (parameter_list)(return_type){
+	// code
+	}()
 
 Example program:
-package main
-import "fmt"
-func main() {
-	defer fmt.Println("Second")
-	defer fmt.Println("First")
-	fmt.println("Hello")
-}
+
+		package main
+		import "fmt"
+		func main() {
+		defer fmt.Println("Second")
+		defer fmt.Println("First")
+		fmt.println("Hello")
+		}
+
 Output:
-Hello
-First
-Second
+
+		Hello
+		First
+		Second
 
 •	Several defer statements are permitted in a single Go program and carried out in LIFO (Last-In, First-Out).
 •	The arguments in the defer statements are assessed during the execution of the defer statement, not during invocation.
