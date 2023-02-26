@@ -8,9 +8,9 @@ Example program:
 	  package main
 	  import "fmt"
 	  func main() 
-  {
-  fmt.Println("Hello, my name is Deekshith Mattepally")
-  }
+{
+fmt.Println("Hello, my name is Deekshith Mattepally")
+}
 
 Output:
 
