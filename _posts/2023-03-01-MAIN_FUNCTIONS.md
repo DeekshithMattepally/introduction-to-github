@@ -14,7 +14,7 @@ Example program:
 
 Output:
 
-  Hello, my name is Deekshith Mattepally
+  	Hello, my name is Deekshith Mattepally
 
 •	The main() function, which is the program's entry point, is defined in this program. This indicates that the main() function will be called first when the program is executed.
 •	The main() function generally includes much more code in a real program, including variable declarations, function calls, and other statements that specify the program's behavior.
@@ -25,28 +25,34 @@ Init() function:
 When a package is imported into memory in Go, a particular function called init() is called automatically. Any initialization operations that must be completed before the package can be used are usually carried out using the init() function defined in a package.
 Wherever in the program we like, we can create an init() function, which is called in lexical file name order (Alphabetical Order). Moreover, statements may be included if the init() function is called, but always keep in mind that the init() method runs before the call to the main() function, therefore it is independent of the main() function. Initializing global variables that cannot be initialized in the global context is the primary goal of the init() function.
 Example program:
-// Declaration of the main package
-package main
 
-// Importing package
-import "fmt"
+		// Declaration of the main package
+		
+		package main
 
-// Multiple init() function
-func init() {
-	fmt.Println("Welcome to init() function")
-}
-func init() {
-	fmt.Println("Hello! init() function")
-}
+		// Importing package
+		
+		import "fmt"
 
-// Main function
-func main() {
-	fmt.Println("Welcome to main() function")
-}
+		// Multiple init() function
+		
+		func init() {
+		fmt.Println("Welcome to init() function")
+		}
+		func init() {
+		fmt.Println("Hello! init() function")
+		}
+
+		// Main function
+		
+		func main() {
+		fmt.Println("Welcome to main() function")
+		}
 Output:
-Welcome to init() function
-Hello! init() function
-Welcome to main() function
+
+		Welcome to init() function
+		Hello! init() function
+		Welcome to main() function
 
 •	The Go program in the preceding example demonstrates the init() function's concept. We define two init() functions in this program, and when they are called, they each output a message to the terminal. Additionally, we define the main() method, which serves as the program's starting point and merely outputs another message on the console.
 •	As we can see, the two init() functions are called before the main() function when the application launches automatically. The two init() functions are performed in the order they were defined because we defined two of them.
