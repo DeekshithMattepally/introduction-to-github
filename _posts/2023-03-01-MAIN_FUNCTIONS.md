@@ -95,6 +95,7 @@ Output:
 	fmt.Println(num)
 	}
 	}
+
 	
 OUTPUT:
 
@@ -114,15 +115,25 @@ The defer keyword in Go is used to plan the execution of a function call to happ
 
 Syntax:edd
 	// Function
+	
 	defer func func_name(parameter_list Type)return_type{
+	
 	// Code
+	
 	}
+	
 	// Method
+	
 	defer func (receiver Type) method_name(parameter_list){
+	
 	// Code
+	
 	}
+	
 	defer func (parameter_list)(return_type){
+	
 	// code
+	
 	}()
 
 Example program:
