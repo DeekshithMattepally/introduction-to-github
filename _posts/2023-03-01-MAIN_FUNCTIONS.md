@@ -5,11 +5,11 @@ Main() function:
 The main package in the Go programming language is a unique package used with executable programs and contains the main() function. The entry point of executable programs is a unique function called main(). It neither accepts nor returns any arguments. Every executable program must contain a single main package and the main() function because go automatically calls the main() function, negating the need for explicit main() function calls.
 Example program:
 
-  package main
-  import "fmt"
-  func main() 
+	  package main
+	  import "fmt"
+	  func main() 
   {
-	fmt.Println("Hello, my name is Deekshith Mattepally")
+  fmt.Println("Hello, my name is Deekshith Mattepally")
   }
 
 Output:
