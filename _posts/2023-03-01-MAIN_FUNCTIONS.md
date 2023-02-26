@@ -87,16 +87,16 @@ Output:
 
 2.	demonstrating the absence of a variable:
          
-	package main
-	import "fmt"
-	func main()
-	{
-	numbers :=[]int{1,2,3,4,5}
-	for _ , num :=range numbers
-	{
-	fmt.println(num)
-	}
-	}
+			package main
+			import "fmt"
+			func main()
+			{
+			numbers :=[]int{1,2,3,4,5}
+			for _ , num :=range numbers
+			{
+			fmt.println(num)
+			}
+			}
 
 	
 OUTPUT:
