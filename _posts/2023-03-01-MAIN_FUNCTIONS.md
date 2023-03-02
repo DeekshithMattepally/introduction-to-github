@@ -179,5 +179,7 @@ After the main() function completes, the fmt.Println("Closing the file...") stat
 
 
 •	Several defer statements are permitted in a single Go program and carried out in LIFO (Last-In, First-Out).
+
 •	The arguments in the defer statements are assessed during the execution of the defer statement, not during invocation.
+
 •	Defer statements are frequently used to ensure that files are closed after they no longer need to be open, to end a channel, or to stop program panics.
