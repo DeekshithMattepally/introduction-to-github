@@ -154,6 +154,23 @@ Output:
 		First
 		Second
 
+another example forr defer:		
+
+	package main
+	import "fmt"
+	func main() {
+	defer fmt.Println("Closing the file...")
+	fmt.Println("Opening the file...")
+	fmt.Println("Writing to the file...")
+	}
+
+output:
+
+	Opening the file...
+	Writing to the file...
+	Closing the file...
+
+
 •	Several defer statements are permitted in a single Go program and carried out in LIFO (Last-In, First-Out).
 •	The arguments in the defer statements are assessed during the execution of the defer statement, not during invocation.
 •	Defer statements are frequently used to ensure that files are closed after they no longer need to be open, to end a channel, or to stop program panics.
