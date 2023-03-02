@@ -153,6 +153,30 @@ Output:
 		Hello
 		First
 		Second
+		
+
+another example for defer:		
+
+	package main
+	import "fmt"
+	func main() {
+	defer fmt.Println("Closing the file...")
+	fmt.Println("Opening the file...")
+	fmt.Println("Writing to the file...")
+	}
+
+output:
+
+	Opening the file...
+	Writing to the file...
+	Closing the file...
+
+
+In this example, we use the defer keyword to schedule a call to fmt.Println("Closing the file...") to be executed after the main() function completes. The fmt.Println("Opening the file...") and fmt.Println("Writing to the file...") statements are executed first and print "Opening the file..." and "Writing to the file..." to the console, respectively.
+
+
+After the main() function completes, the fmt.Println("Closing the file...") statement is executed and prints "Closing the file..." to the console. This demonstrates how defer can be used to ensure that certain cleanup tasks are executed after a function completes, regardless of whether the function returns normally or with an error.
+
 
 •	Several defer statements are permitted in a single Go program and carried out in LIFO (Last-In, First-Out).
 •	The arguments in the defer statements are assessed during the execution of the defer statement, not during invocation.
