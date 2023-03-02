@@ -49,6 +49,8 @@ Example program:
 		func main() {
 		fmt.Println("Welcome to main() function")
 		}
+
+
 Output:
 
 		Welcome to init() function
