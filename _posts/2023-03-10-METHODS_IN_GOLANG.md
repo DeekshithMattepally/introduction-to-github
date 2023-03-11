@@ -13,19 +13,19 @@ We are permitted to define a method in the Go language whose receiver is a struc
 
 Example:
 
-  package main
-  import "fmt"
-  type Person struct {
-  Name string
-  Age  int
-  }
-  func (p Person) Greet() {
-  fmt.Printf("Hello, my name is %s and I'm %d years old.\n", p.Name, p.Age)
-  }
-  func main() {
-  p := Person{Name: "Deekshith", Age: 24}
-  p.Greet()
-  }
+            package main
+            import "fmt"
+            type Person struct {
+            Name string
+            Age  int
+            }
+            func (p Person) Greet() {
+            fmt.Printf("Hello, my name is %s and I'm %d years old.\n", p.Name, p.Age)
+            }
+            func main() {
+            p := Person{Name: "Deekshith", Age: 24}
+            p.Greet()
+            }
 
 Output: 
 
@@ -88,6 +88,8 @@ Example:
 Output:
 
   1
+  
+  
   2
 
 
@@ -144,10 +146,14 @@ Example:
         
 Output:
 
-  Hello, my name is Deekshith and I'm 24 years old.
-  Hello, my name is Deepak and I'm 30 years old.
-  Hello, my name is RamaKrishna and I'm 47 years old.
-  Hello, my name is Srilatha and I'm 40 years old.
+      
+      Hello, my name is Deekshith and I'm 24 years old.
+      
+      Hello, my name is Deepak and I'm 30 years old.
+      
+      Hello, my name is RamaKrishna and I'm 47 years old.
+      
+      Hello, my name is Srilatha and I'm 40 years old.
 
 •	In this example, a Person struct is defined using the attributes Name and Age. Then, we define two methods: Greet, which prints a greeting message using a value receiver, and SetAge, which sets the person's age using a pointer receiver.
 •	We employ these techniques in the main function to show how they work. By utilizing the value receiver method Greet and the pointer receiver methods SetAge and Greet, we create two instances of the Person class: p1 and p2, respectively.
@@ -286,10 +292,14 @@ Example:
 
 Output:
 
-    Person: Deekshith 24
-    Pointer: Deekshith 24
-    Person: Deekshith 35
-    Pointer: Deekshith 35
+        
+        Person: Deekshith 24
+        
+        Pointer: Deekshith 24
+        
+        Person: Deekshith 35
+        
+        Pointer: Deekshith 35
 
 •	We define a Person struct with two fields in this program: Name and Age. The & operator is then used to generate the new person p1 and a pointer to the person p2.
 •	Using fmt.Println, we print the values for the person and the pointer. Next, we use the pointer p2 to update the person's age. Given that p1 and p2 both refer to the same underlying data, this also changes p1's age.
